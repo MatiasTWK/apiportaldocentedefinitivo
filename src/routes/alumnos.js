@@ -39,5 +39,13 @@ router.delete("/alumnos/:id", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+//ver alumnos por id
+router.get('/alumnos/:id', (req, res) => {
+    const { id } = req.params;
+    alumnosSchema
+        .findById(id)
+        .then((dato) => res.json(dato))
+        .catch((error) => res.json({ message: error }));
+});
 
 module.exports = router;

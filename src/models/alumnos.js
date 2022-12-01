@@ -18,7 +18,7 @@ const alumnosSchema = mongoose.Schema({
             ref:'asignaturas',
             autopopulate: true,
         },
-    ],
+    ]
 });
 
 alumnosSchema.plugin(require('mongoose-autopopulate'));
